@@ -70,7 +70,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainScreen(
+private fun MainScreen(
     state: MainViewState,
     sizeCell: Int,
     onStopClick: () -> Unit,
@@ -99,7 +99,7 @@ fun MainScreen(
 
 
 @Composable
-fun ButtonsSection(
+private fun ButtonsSection(
     onStopClick: () -> Unit,
     onRandomClick: () -> Unit,
     onPlayClick: () -> Unit,
@@ -129,7 +129,7 @@ fun ButtonsSection(
         Spacer(modifier = Modifier.size(16.dp))
         Button(
             onClick = onRandomClick,
-            Modifier.weight(1f)
+            modifier = Modifier.weight(1f)
         ) {
             Text(text = stringResource(id = R.string.random_cell))
         }
@@ -137,7 +137,7 @@ fun ButtonsSection(
 }
 
 @Composable
-fun Grid(
+private fun Grid(
     cells: List<CellModel>,
     sizeCell: Int
 ) {
@@ -156,7 +156,7 @@ fun Grid(
 }
 
 @Composable
-fun Cell(
+private fun Cell(
     isAlive: Boolean,
     liveColor: Color = Color.White,
     deathColor: Color = Color.Black,
