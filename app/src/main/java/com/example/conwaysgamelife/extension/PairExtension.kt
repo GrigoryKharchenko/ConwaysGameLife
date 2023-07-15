@@ -7,4 +7,4 @@ fun Pair<Int, Int>.isInBounds() =
         .or(first >= GRID_SIZE)
         .or(second < 0).or(second >= GRID_SIZE))
 
-fun Pair<Int, Int>.toIndex() = second * GRID_SIZE
+fun Pair<Int, Int>.toIndex() = second * GRID_SIZE + first
